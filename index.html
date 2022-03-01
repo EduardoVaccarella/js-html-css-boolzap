@@ -10,93 +10,123 @@
     <title>BoolZap</title>
 </head>
 <body>
+
+    <div id="app">
+
+        <div id="sfondo">
+            <div id="header-sfondo">
     
-    <div id="sfondo">
-        <div id="header-sfondo">
-
-        </div>
-        <div id="main-sfondo">
-
-        </div>
-
-        <div id="main-wrapper">
-
-            <div id="main-container">
-                
-                <div id="chat-list">
-                    <div class="header-chat">
-                        <div class="img-wrapper">
-                            <div class="img-profilo">
-                                <img src="https://picsum.photos/200" alt="">
-                            </div>
-                            <div class="nome">
-                                Elena
-                            </div>
-                        </div>
-
-                        <div class="icon-wrapper">
-                            <div>
-                                <i class="fa-solid fa-circle-notch"></i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-message"></i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="notifiche" class="header-chat">
-                        <div id="flex-2" class="img-wrapper">
-                            <div id="position" class="img-profilo">
-                                <i class="fa-solid fa-bell-slash"></i>
-                            </div>
-                            <div>
-                                <div class="nome">
-                                    Ricevi notifiche di nuovi utenti
-                                </div>
-                                <div id="link">
-                                    Attiva notifiche desktop
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="chat">
-                    <div class="header-chat">
-                        <div id="flex-2" class="img-wrapper">
-                            <div id="position" class="img-profilo">
-                                <img src="https://picsum.photos/200" alt="">
-                            </div>
-                            <div>
-                                <div class="nome">
-                                    Michele
-                                </div>
-                                <div id="accesso">
-                                    Ultimo accesso 28/02/2022 12:07
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="icon-wrapper">
-                            <div>
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-paperclip"></i>
-                            </div>
-                            <div>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+    
+            <div id="main-wrapper">
+    
+                <div id="main-container">
+                    
+                    <div id="chat-list">
+                        <div class="header-chat">
+                            <div class="img-wrapper">
+                                <div class="img-profilo">
+                                    <img src="https://picsum.photos/200" alt="">
+                                </div>
+                                <div class="nome">
+                                    Elena
+                                </div>
+                            </div>
+    
+                            <div class="icon-wrapper">
+                                <div>
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-message"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="notifiche" class="header-chat">
+                            <div id="flex-2" class="img-wrapper">
+                                <div id="position" class="img-profilo">
+                                    <i class="fa-solid fa-bell-slash"></i>
+                                </div>
+                                <div>
+                                    <div class="nome">
+                                        Ricevi notifiche di nuovi utenti
+                                    </div>
+                                    <div id="link">
+                                        Attiva notifiche desktop
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div id="input-chat-list-wrapper">
+
+                            <i id="padding-left" class="fa-solid fa-magnifying-glass"></i>
+
+                            <input id="input-chat-list" v-model="message">
+
+                        </div>
+
+                            <div id="chat-background-color" class="header-chat" v-for="element in contacts">
+                                <div id="flex-2" class="img-wrapper">
+                                    <div id="position" class="img-profilo">
+                                        <img :src="element.avatar" alt="">
+                                    </div>
+                                    <div>
+                                        <div class="nome">
+                                            {{ element.name }}
+                                        </div>
+                                        <div class="accesso">
+                                            Last message
+                                        </div>
+                                    </div>
+
+                                    <div id="accesso-chat-list" class="accesso">
+                                        28/02/2022 12:07
+                                    </div>
+                                </div>
+                            </div>
+    
+                    </div>
+    
+                    <div id="chat">
+                        <div class="header-chat">
+                            <div id="flex-2" class="img-wrapper">
+                                <div id="position" class="img-profilo">
+                                    <img src="https://picsum.photos/200" alt="">
+                                </div>
+                                <div>
+                                    <div class="nome">
+                                        Michele
+                                    </div>
+                                    <div class="accesso">
+                                        Ultimo accesso 28/02/2022 12:07
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="icon-wrapper">
+                                <div>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-paperclip"></i>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
         </div>
+
     </div>
     
     <script src="myscript.js"></script>

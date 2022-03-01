@@ -9,18 +9,13 @@
 #sfondo {
     width: 100vw;
     height: 100vh;
+    background-color: #D5DBD9;
 }
 
 #header-sfondo {
     width: 100vw;
     height: 200px;
     background-color: #469689;
-}
-
-#main-sfondo {
-    width: 100vw;
-    height: calc(100vh - 200px);
-    background-color: #D5DBD9;
 }
 
 #main-wrapper {
@@ -120,8 +115,39 @@
     height: 60px;
 }
 
-#accesso {
+.accesso {
     color: rgb(134, 134, 134);
     padding-left: 10px;
     font-size: smaller;
 }
+
+#input-chat-list {
+    width: 100%;
+    height: 25px;
+    border: 0;
+}
+
+#input-chat-list-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: 5px solid rgba(211, 211, 211, 0.603);
+    color: rgb(158, 158, 158);
+}
+
+#padding-left {
+    padding-left: 10px;
+}
+
+#chat-background-color {
+    background-color: white;
+}
+
+#accesso-chat-list {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
