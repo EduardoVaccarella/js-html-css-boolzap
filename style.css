@@ -151,3 +151,33 @@
     justify-content: flex-end;
 }
 
+#chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input-chat {
+    height: 60px;
+    background-color: #F3EEEA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+.input-chat-input {
+    display: flex;
+    flex-grow: 1;
+}
+
+.input-chat-input input {
+    height: 40px;
+    border: 0;
+    flex-grow: 1;
+}
+
+.emojis {
+    color: rgb(94, 94, 94);
+}
