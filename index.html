@@ -70,7 +70,7 @@
 
                         </div>
 
-                            <div @click="displayMessages(index)" id="chat-background-color" class="header-chat" v-for="(element, index) in contacts">
+                            <div @click="displayMessages(index)" id="chat-background-color" class="header-chat" v-for="(element, index) in filterContacts">
                                 <div id="flex-2" class="img-wrapper">
                                     <div id="position" class="img-profilo">
                                         <img :src="element.avatar" alt="">
@@ -122,9 +122,9 @@
                         </div>
 
                         <div class="chat-wrapper">
-                            <div v-for="message in currentMessages" class="messaggio-wrapper">
+                            <div v-for="message in currentMessages" class="messaggio-wrapper" :class="(message.status) ? 'sent-wrapper' : 'received-wrapper'">
 
-                                <div class="messaggio">
+                                <div class="messaggio" :class="(message.status) ? 'sent' : 'received'">
                                     <div class="contenuto testo-messaggio">
                                         {{message.text}}
                                     </div>
