@@ -66,11 +66,11 @@
 
                             <i id="padding-left" class="fa-solid fa-magnifying-glass"></i>
 
-                            <input id="input-chat-list" v-model="message">
+                            <input id="input-chat-list" @keyup.enter="cercaContatto" v-model="contatto" placeholder="Cerca contatto">
 
                         </div>
 
-                            <div id="chat-background-color" class="header-chat" v-for="element in contacts">
+                            <div @click="displayMessages(index)" id="chat-background-color" class="header-chat" v-for="(element, index) in contacts">
                                 <div id="flex-2" class="img-wrapper">
                                     <div id="position" class="img-profilo">
                                         <img :src="element.avatar" alt="">
@@ -100,7 +100,7 @@
                                 </div>
                                 <div>
                                     <div class="nome">
-                                        Michele
+                                        {{currentName}}
                                     </div>
                                     <div class="accesso">
                                         Ultimo accesso 28/02/2022 12:07
@@ -121,6 +121,20 @@
                             </div>
                         </div>
 
+                        <div class="chat-wrapper">
+                            <div v-for="message in currentMessages" class="messaggio-wrapper">
+
+                                <div class="messaggio">
+                                    <div class="contenuto testo-messaggio">
+                                        {{message.text}}
+                                    </div>
+                                    <div class="contenuto data-messaggio">
+                                        {{message.date}}
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+
                         <div class="input-chat">
 
                             <div class="emojis">
@@ -128,7 +142,7 @@
                             </div>
 
                             <div class="input-chat-input">
-                                <input v-model="message">
+                                <input v-model="messaggio" @keyup.enter="sendMessage" placeholder="Scrivi messaggio">
                             </div>
 
                             <div class="emojis">

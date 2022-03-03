@@ -145,6 +145,10 @@
     background-color: white;
 }
 
+#chat-background-color:hover {
+    background-color: rgba(216, 216, 216, 0.486);
+}
+
 #accesso-chat-list {
     flex-grow: 1;
     display: flex;
@@ -178,6 +182,72 @@
     flex-grow: 1;
 }
 
+input {
+    padding: 10px;
+}
+
+input:focus {
+    outline: none;
+}
+
 .emojis {
     color: rgb(94, 94, 94);
+}
+
+.chat-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px 30px;
+    gap: 5px;
+}
+
+.messaggio-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.sent-wrapper {
+    justify-content: end;
+}
+
+.received-wrapper {
+    justify-content: start;
+}
+
+.sent {
+    background-color: #D5F9BA;
+}
+
+.received {
+    background-color: white;
+}
+
+.messaggio {
+    display: flex;
+    max-width: 40%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.contenuto {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.data-messaggio {
+    justify-content: flex-end;
+    color: rgba(128, 128, 128, 0.521);
+    font-size: smaller;
+}
+
+.testo-messaggio {
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
