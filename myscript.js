@@ -215,6 +215,13 @@ const app = new Vue(
 
 
 
-// con l'operatore terziario verifico se un messaggio é inviato o ricevuto e assegno la classe corrispondente al messaggio
+// bonus: aggiungo un elemento con una freccia nel container 'contenuto' con display: none
+// in hover avrá display: block
 
-// nei methods scriveró la funzione per ricercare i contatti che metterá in display: none; i contatti che non includono nel nome la parola ricercata
+// creo un altro elemento html in display:none che sia in position relative rispetto al container 'messaggio'
+
+// la freccia @onclick dará una classe al secondo elemento in modo da renderlo display: block
+
+// il secondo elemento contenente 'elimina messaggio' @onclick triggererá una funzione in modo da pop() il messaggio stesso dall'array di currentMessages e anche da quello contacts.messages
+
+// con il pop() del messaggio anche la freccia e il secondo elemento scompaiono
